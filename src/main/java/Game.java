@@ -15,9 +15,8 @@ public class Game {
             try {
                 Integer.parseInt(str);
                 break;
-
             } catch (Exception e) {
-                System.out.println("Vous n'avez pas saisie des chiffres !");
+                System.out.println("Vous n'avez pas saisie des chiffres !Essayer de nouveau :");
                 str = this.scan.next();
             }
         }
@@ -62,7 +61,7 @@ public class Game {
 
     public Boolean endgame(){ //Annonce la fin de la partie
         if (this.tentative == 0) {
-            System.out.println("Vous avez perdu ... \n Rejouez dons une partie ! ");
+            System.out.println("Vous avez perdu ... \n Rejouez donc une partie ! ");
             return true;
         }
         else if(this.tentative == -1){

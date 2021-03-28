@@ -36,8 +36,6 @@ public class App {
             else if(Integer.parseInt(menu) == 2) {
                 mystere = random.getRandomNumber(0, 9);
                 while (true) {
-                    //String cc = String.valueOf(random.returnNumber("1000", m));
-                    System.out.println(mystere);
                     System.out.println("Entrez un nombre à 4 valeurs (max):\n");
                     Value = game.input();
                     System.out.println(game.tentative());
