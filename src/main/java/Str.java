@@ -1,0 +1,28 @@
+public class Str {
+    public Str(){
+        System.out.println("Call Str.");
+    }
+
+    public static String replaceCharAt(String s,int pos,char c){ //Remplace un caractere dans un str
+        return s.substring(0,pos) + c + s.substring(pos+1);
+    }
+
+    public static String replaceIntAt(String s,int pos,int c){ //Remplace un caractere dans un str
+        return s.substring(0,pos) + c + s.substring(pos+1);
+    }
+
+    public String verifLen(String nbStr){ // Test the length of nbStr
+        if(nbStr.length()==(4)) {
+            return nbStr;
+        }
+        return "False";
+    }
+
+    public int strToInt(String nbStr){
+        System.out.println("Conversion str en int");
+        int nb = 0;
+        nb = Integer.parseInt(nbStr);
+        return nb;
+    }
+
+}
