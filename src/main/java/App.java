@@ -2,7 +2,7 @@ import java.util.Scanner;
 //erreur dans le programme si le nombre est inferieur a 4 chiffres
 public class App {
     public static void main(String[] args) {
-        System.out.println("---- Random Game ----");
+        Game.title();
         //declaration variable
         while (true) { //Loop for the menu
         String testValue,Value,menu,mystere;
@@ -13,15 +13,15 @@ public class App {
         Game game = new Game();
         Str str = new Str();
         //Begin of the game
-            System.out.println("MODE || IA VS USER -----> TAPER 1.\nMODE || USER VS IA -----> TAPER 2.\nPour quitter taper 0.");
-            menu = saisieUtilisateur.next();
+            System.out.println("MODE 1 || IA VS USER -----> TAPER 1.\nMODE 2 || USER VS IA -----> TAPER 2.\nPour quitter taper 0.");
+            menu = game.inputMenu();
             if(Integer.parseInt(menu) == 0){ //exit the game / stop the programm
                 System.out.println("Vous quittez le jeu.");
                 break;
             }
             else if(Integer.parseInt(menu) == 1){ //Ia vs User,User define mystery number
                 System.out.println("Donner un nombre à l'Ia pour qu'il devine:");
-                mystere = saisieUtilisateur.next();
+                mystere = game.input();
                 while(true){
                     System.out.println("Le BOT va deviner le nombre mystere !!!");
                     bot.nb = bot.findNb(bot.reponse,bot.nb);
@@ -39,7 +39,7 @@ public class App {
                     //String cc = String.valueOf(random.returnNumber("1000", m));
                     System.out.println(mystere);
                     System.out.println("Entrez un nombre à 4 valeurs (max):\n");
-                    Value = saisieUtilisateur.next();
+                    Value = game.input();
                     System.out.println(game.tentative());
                     testValue = game.returnValue(Value, String.valueOf(mystere));
                     System.out.println(testValue);

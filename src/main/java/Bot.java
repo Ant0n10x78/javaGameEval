@@ -3,7 +3,6 @@ public class Bot {
     public String nb = "????";//int -> str
 
     public Bot(){
-        System.out.println("Call Bot.java.");
     }
 
     public String findNb(String solution,String mystere){ //solution --> "====" ||mystere --> "3323"

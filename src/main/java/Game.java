@@ -3,10 +3,34 @@ import java.util.Scanner;
 public class Game {
     public int tentative;
     public int v =0;
+    public Scanner scan = new Scanner(System.in);
 
     public Game(){ //constructeur
-        System.out.println("Call Game");
         this.tentative = 10;
+    }
+
+    public String input() {
+        String str = this.scan.next();
+        while (true){
+            try {
+                Integer.parseInt(str);
+                break;
+
+            } catch (Exception e) {
+                System.out.println("Vous n'avez pas saisie des chiffres !");
+                str = this.scan.next();
+            }
+        }
+        while(str.length()!=4 ){
+            System.out.println("Vous n'avez pas saisie le bon nombre de chiffre ,essayer de nouveau :\n");
+            str = this.scan.next();
+        }
+        return str;
+    }
+
+    public String inputMenu(){
+        String str = this.scan.next();
+        return str;
     }
 
     public String tentative(){//Annonce Victoire ou defaite /tentative restante
@@ -47,5 +71,12 @@ public class Game {
         }
         return false;
     }
-
+    public static void title(){
+        System.out.println("███╗░░██╗░█████╗░███╗░░░███╗██████╗░██████╗░███████╗  ███╗░░░███╗██╗░░░██╗░██████╗████████╗███████╗██████╗░███████╗");
+        System.out.println("████╗░██║██╔══██╗████╗░████║██╔══██╗██╔══██╗██╔════╝  ████╗░████║╚██╗░██╔╝██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝");
+        System.out.println("██╔██╗██║██║░░██║██╔████╔██║██████╦╝██████╔╝█████╗░░  ██╔████╔██║░╚████╔╝░╚█████╗░░░░██║░░░█████╗░░██████╔╝█████╗░░");
+        System.out.println("██║╚████║██║░░██║██║╚██╔╝██║██╔══██╗██╔══██╗██╔══╝░░  ██║╚██╔╝██║░░╚██╔╝░░░╚═══██╗░░░██║░░░██╔══╝░░██╔══██╗██╔══╝░░");
+        System.out.println("██║░╚███║╚█████╔╝██║░╚═╝░██║██████╦╝██║░░██║███████╗  ██║░╚═╝░██║░░░██║░░░██████╔╝░░░██║░░░███████╗██║░░██║███████╗");
+        System.out.println("╚═╝░░╚══╝░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚═╝░░╚═╝╚══════╝  ╚═╝░░░░░╚═╝░░░╚═╝░░░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚══════╝\n");
+    }
 }

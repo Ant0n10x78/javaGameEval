@@ -3,7 +3,7 @@ public class R {
     public int max=9;
 
     public R(){
-        System.out.println("Call R.");
+
     }
 
     public String getRandomNumber(int min,int max){ //Input char in mystere and return String mystere

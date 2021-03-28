@@ -1,6 +1,5 @@
 public class Str {
     public Str(){
-        System.out.println("Call Str.");
     }
 
     public static String replaceCharAt(String s,int pos,char c){ //Remplace un caractere dans un str
