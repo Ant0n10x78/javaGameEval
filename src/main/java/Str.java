@@ -11,11 +11,11 @@ public class Str {
         return s.substring(0,pos) + c + s.substring(pos+1);
     }
 
-    public String verifLen(String nbStr){ // Test the length of nbStr
+    public Boolean verifLen(String nbStr){ // Test the length of nbStr
         if(nbStr.length()==(4)) {
-            return nbStr;
+            return true;
         }
-        return "False";
+        return false;
     }
 
     public int strToInt(String nbStr){

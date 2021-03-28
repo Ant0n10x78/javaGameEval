@@ -5,25 +5,16 @@ public class App {
         System.out.println("---- Random Game ----");
         //declaration variable
         while (true) { //Loop for the menu
-        int nb = 0;
-        String testValue;
-        String Value;
-        String menu;
+        String testValue,Value,menu,mystere;
         //Declaration objet
         Scanner saisieUtilisateur = new Scanner(System.in);
         R random = new R();
         Bot bot = new Bot();
         Game game = new Game();
         Str str = new Str();
-
-        String mystere = random.getRandomNumber(0, 9);
-        String m = String.valueOf(mystere);
-        //loop for the game
-
-            System.out.println("Yala :"+"salut".substring(0,1));
+        //Begin of the game
             System.out.println("MODE || IA VS USER -----> TAPER 1.\nMODE || USER VS IA -----> TAPER 2.\nPour quitter taper 0.");
             menu = saisieUtilisateur.next();
-            System.out.println("menu : "+menu+"\n");
             if(Integer.parseInt(menu) == 0){ //exit the game / stop the programm
                 System.out.println("Vous quittez le jeu.");
                 break;
@@ -43,14 +34,14 @@ public class App {
                 }
             }
             else if(Integer.parseInt(menu) == 2) {
-                //mystere = random.getRandomNumber(0, 9);
+                mystere = random.getRandomNumber(0, 9);
                 while (true) {
                     //String cc = String.valueOf(random.returnNumber("1000", m));
                     System.out.println(mystere);
                     System.out.println("Entrez un nombre à 4 valeurs (max):\n");
                     Value = saisieUtilisateur.next();
                     System.out.println(game.tentative());
-                    testValue = game.returnValue(Value, m);
+                    testValue = game.returnValue(Value, String.valueOf(mystere));
                     System.out.println(testValue);
                     if (game.endgame()) {
                         break;

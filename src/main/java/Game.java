@@ -35,6 +35,7 @@ public class Game {
             }
         return rstr;
         }
+
     public Boolean endgame(){ //Annonce la fin de la partie
         if (this.tentative == 0) {
             System.out.println("Vous avez perdu ... \n Rejouez dons une partie ! ");
