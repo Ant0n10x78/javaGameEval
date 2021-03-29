@@ -54,7 +54,7 @@ public class Game {
                 }
                 }
             if(Integer.parseInt(nbStr)==Integer.parseInt(x)){
-                this.tentative = 0;
+                this.tentative = -1;
             }
         return rstr;
         }
@@ -65,7 +65,7 @@ public class Game {
             return true;
         }
         else if(this.tentative == -1){
-            System.out.println("Vous avez gagné \nFélicitation !!!!! \n Rejouez donc une partie ! ");
+            System.out.println("Vous avez gagné!!! \nFélicitation !!!!! \n Rejouez donc une partie ! \n\n");
             return true;
         }
         return false;
